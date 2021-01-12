@@ -32,44 +32,48 @@
         </button>
         <a href="contact_us.html" class="header-contact">Contact Us</a>
     </header>
-    <main class="main">
-        <h1 class="main-title">Contact Us</h1>
-        <ul class="main-breadcrumbs">
-            <li class="main-breadcrumbs-item">
-                <a href="../index.html" class="main-breadcrumbs-link">Home</a>
+    <main>
+        <h1 class="title">Contact Us</h1>
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs-item">
+                <a href="../index.html" class="breadcrumbs-link">Home</a>
             </li>
-            <li class="main-breadcrumbs-item">
-                <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M1.31229 0L0 1.17735L5.37541 6L0 10.8227L1.31229 12L8 6L1.31229 0Z" fill="#1E0606" />
-                </svg>
-            </li>
-            <li class="main-breadcrumbs-item">
-                <span class="main-breadcrumbs-desc">Contact Us</span>
+            <li class="breadcrumbs-item">
+                <span class="breadcrumbs-desc">Contact Us</span>
             </li>
         </ul>
-        <section class="hero">
-            <form action="https://echo.htmlacademy.ru" method="post" class="main-form">
-                <fieldset class="form-fieldset-wrapper">
-                    <label for="name-input" class="fieldset-wrapper-desc">Name</label>
-                    <input id="name-input" type="text" placeholder="Ivan Ivanov">
-                    <label for="phone-input" class="fieldset-wrapper-desc">Phone</label>
-                    <input type="tel" id="phone-input">    
-                </fieldset>
-                <label for="email-input" class="form-desc">Email</label>
-                <input type="email" id="email-input">
-                <label for="textarea" class="form-desc">Message</label>
-                <textarea id="textarea" cols="30" rows="10"></textarea>
-                <input id="check" type="checkbox" class="input" value="" checked>
-                <label for="check" class="checkbox">By clicking on the button, you consent to the processing of your
-                    personal data</label>
-                <button type="submit" class="button">SUBMIT</button>
+        <section class="contact-block">
+            <form action="https://echo.htmlacademy.ru" method="post" class="form">
+                <fieldset class="form-fieldset">
+                    <div class="fieldset-wrapper">
+                        <input id="name-input" type="text" placeholder="Ivan Ivanov">
+                        <label for="name-input" class="label">Name</label>
+                    </div>
+                    <div class="fieldset-wrapper">
+                        <input type="tel" id="phone-input">   
+                        <label for="phone-input" class="label">Phone</label>
+                    </div>
+                    <div class="fieldset-wrapper">
+                        <input type="email" id="email-input">
+                        <label for="email-input" class="label">Email</label>
+                    </div>
+                    <div class="fieldset-wrapper">
+                        <textarea id="textarea" cols="30" rows="10"></textarea>
+                        <label for="textarea" class="label">Message</label>
+                    </div>
+                    <div class="fieldset-wrapper">
+                        <input id="check" type="checkbox" class="input" value="" checked>
+                        <label for="check" class="checkbox">By clicking on the button, you consent to the processing of your
+                            personal data</label>
+                    </div>
+               <button type="submit" class="button">SUBMIT</button>
+            </fieldset>
             </form>
-            <div class="hero-wrapper">
-                <p class="hero-desc">Our support team are on-hand to assist with any issues you are experiencing.</p>
-                <p class="hero-desc">Please use the form to contact us with your needs. Send us a message and we'll respond as
+            <div class="contact-wrapper">
+                <p class="contact-desc">Our support team are on-hand to assist with any issues you are experiencing.</p>
+                <p class="contact-desc">Please use the form to contact us with your needs. Send us a message and we'll respond as
                     soon as possible.</p>
-                <span class="hero-text">An expert is waiting to help you!</span>
+                <span class="contact-text">An expert is waiting to help you!</span>
             </div>
         </section>
     </main>

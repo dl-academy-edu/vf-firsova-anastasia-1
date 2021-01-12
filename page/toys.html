@@ -32,11 +32,14 @@
         </button>
         <a href="contact_us.html" class="header-contact">Contact Us</a>
     </header>
-    <main class="main">
-        <h1 class="main-title">Toy for kids</h1>
-        <ul class="main-breadcrumbs">
-            <li class="main-breadcrumbs-item">
-                <a href="../index.html" class="main-breadcrumbs-link">Home</a>
+    <main>
+        <h1 class="title">Toy for kids</h1>
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs-item">
+                <a href="../index.html" class="breadcrumbs-link">Home</a>
+            </li>
+            <li class="breadcrumbs-item">
+                <a href="catalog.html" class="breadcrumbs-link">Catalog</a>
             </li>
             <li>
                 <svg width="8" height="12" viewBox="0 0 8 12" fill="Fast shippingne" xmlns="http://www.w3.org/2000/svg">
@@ -44,162 +47,140 @@
                         d="M1.31229 0L0 1.17735L5.37541 6L0 10.8227L1.31229 12L8 6L1.31229 0Z" fill="#1E0606" />
                 </svg>
             </li>
-            <li class="main-breadcrumbs-item">
-                <a href="catalog.html" class="main-breadcrumbs-link">Catalog</a>
-            </li>
-            <li>
-                <svg width="8" height="12" viewBox="0 0 8 12" fill="Fast shippingne" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="eveFast shippingdd" clip-rule="eveFast shippingdd"
-                        d="M1.31229 0L0 1.17735L5.37541 6L0 10.8227L1.31229 12L8 6L1.31229 0Z" fill="#1E0606" />
-                </svg>
-            </li>
-            <li class="main-breadcrumbs-item">
-                <span class="main-breadcrumbs-link">Toys</span>
+            <li class="breadcrumbs-item">
+                <span class="breadcrumbs-link">Toys</span>
             </li>
         </ul>
-        <form action="" method="POST" class="main-form">
-            <fieldset class="form-fieldset-cost">
-                <legend class="fieldset-cost-title">Cost</legend>
-                <div class="fieldset-cost-scale">
-                    <div class="fieldset-color-cost-scale-strip"></div>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="12" cy="12" r="12" fill="#C29974"/>
-                        <circle cx="12" cy="12" r="3.65217" fill="white"/>
-                        </svg>
-                    <div class="fieldset-color-cost-scale-rectangle"></div>
+        <form action="" method="POST" class="form-toys">
+            <fieldset class="form-toys-fieldset">
+                <div>
+                    <input type="range" id="cost" name="cost" min="0" max="500">
+                    <label for="cost" class="label">Cost</label>
                 </div>
-                <span class="fieldset-color-cost-desc">0</span>
-                <span class="fieldset-wrappe-cost-desc">500</span>
-            </fieldset>
-            <fieldset class="form-fieldset-color-color">
-                <legend class="fieldset-color-title">Color</legend>
-                <ul class="fieldset-color-list">
-                    <li class="fieldset-color-item">
-                        <input id="check-black" type="checkbox" class="input" value="Black" checked>
-                        <label for="check-black" class="checkbox">Black</label>
-                    </li>
-                    <li class="fieldset-color-item">
-                        <input id="check-blue" type="checkbox" class="input" value="Blue">
-                        <label for="check-blue" class="checkbox">Blue</label>
-                    </li>
-                    <li class="fieldset-color-item">
-                        <input id="check-green" type="checkbox" class="input" value="Green">
-                        <label for="check-green" class="checkbox">Green</label>
-                    </li>
-                    <li class="fieldset-color-item">
-                        <input id="check-white" type="checkbox" class="input" value="White">
-                        <label for="check-white" class="checkbox">White</label>
-                    </li>
-                </ul>
-            </fieldset>
-            <fieldset class="form-fieldset-delivery">
-                <legend class="form-fieldset-delivery-title">Delivery</legend>
-                <ul class="delivery-radio-list">
-                    <li class="delivery-radio-item">
-                        <input id="radio-free-shipping" type="radio" name="report" value="Free shipping" class="radio">
-                        <label for="radio-free-shipping" class="radio-button">Free shipping</label>
-                    </li>
-                    <li class="delivery-radio-item">
-                        <input id="radio-fast-shipping" type="radio" name="report" value="Fast shipping" class="radio" checked>
-                        <label for="radio-fast shipping" class="radio-button">Fast shipping</label>
-                    </li>
-                </ul>
-            </fieldset>
-            <fieldset class="form-fieldset-amount">
-                <legend class="form-fieldset-amount-title">Amount</legend>
-                <ul class="amount-radio-list">
-                    <li class="amount-radio-item">
-                        <input id="radio-min" type="radio" name="report-amount" value="0-5" class="radio-amount" checked>
-                        <label for="radio-min" class="radio-btn-active">0-5</label>
-                    </li>
-                    <li class="amount-radio-item">
-                        <input id="radio-average" type="radio" name="report-amount" value="10-20" class="radio-amount" >
-                        <label for="radio-average" class="radio-btn">10-20</label>
-                    </li>
-                    <li class="amount-radio-item">
-                        <input id="radio-max" type="radio" name="report-amount" value="20-50" class="radio-amount">
-                        <label for="radio-max" class="radio-btn">20-50</label>
-                    </li>
+                <div>
+                    <ul class="color-list">
+                        <li class="color-item">
+                            <input id="check-black" type="checkbox" class="checkbox-input" value="Black" checked>
+                            <label for="check-black" class="checkbox-label">Black</label>
+                        </li>
+                        <li class="color-item">
+                            <input id="check-blue" type="checkbox" class="checkbox-input" value="Blue">
+                            <label for="check-blue" class="checkbox-label">Blue</label>
+                        </li>
+                        <li class="color-item">
+                            <input id="check-green" type="checkbox" class="checkbox-input" value="Green">
+                            <label for="check-green" class="checkbox-label">Green</label>
+                        </li>
+                        <li class="color-item">
+                            <input id="check-white" type="checkbox" class="checkbox-input" value="White">
+                            <label for="check-white" class="checkbox-label">White</label>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <span>Delivery</span>
+                    <ul class="delivery-list">
+                        <li class="delivery-item">
+                            <input id="radio-free-shipping" type="radio" name="report" value="Free shipping" class="radio">
+                            <label for="radio-free-shipping" class="radio-label">Free shipping</label>
+                        </li>
+                        <li class="delivery-iitem">
+                            <input id="radio-fast-shipping" type="radio" name="report" value="Fast shipping" class="radio" checked>
+                            <label for="radio-fast shipping" class="radio-label">Fast shipping</label>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <span>Amount</span>
+                    <ul class="amount-list">
+                        <li class="amount-item">
+                            <input id="radio-min" type="radio" name="report-amount" value="0-5" class="radio-amount" checked>
+                            <label for="radio-min" class="amount-label">0-5</label>
+                        </li>
+                        <li class="amount-radio-item">
+                            <input id="radio-average" type="radio" name="report-amount" value="10-20" class="radio-amount" >
+                            <label for="radio-average" class="amount-label">10-20</label>
+                        </li>
+                        <li class="amount-radio-item">
+                            <input id="radio-max" type="radio" name="report-amount" value="20-50" class="radio-amount">
+                            <label for="radio-max" class="amount-label">20-50</label>
+                        </li>
+                </div>
             </fieldset>
             <button type="submit" class="form-button">Apply</button>
         </form>
-        <section class="main-catalog">
-            <h2 class="catalog-title visually-hidden"></h2>
-            <div class="catalog-toys">
-                <ul class="catalog-toys-list">
-                    <li class="catalog-toys-item">
-                        <a href="#" class="catalog-toys-link">
-                            <img src="../image/Sharky.png" alt="product picture" class="catalog-toys-img" width="380px" height="385px">
-                            <span class="catalog-toys-desc">SHARKY BEAN BAG CHAIR COVER</span>
-                            <span class="catalog-toys-text">$60.00 USD</span>
+        <section class="toys-block">
+            <h2 class="toys-title visually-hidden"></h2>
+            <ul class="toys-list">
+                    <li class="toys-item">
+                        <a href="#" class="toys-link">
+                            <img src="../image/Sharky.png" alt="product picture" class="toys-img" width="380px" height="385px">
+                            <span class="toys-desc">SHARKY BEAN BAG CHAIR COVER</span>
+                            <span class="toys-text">$60.00 USD</span>
                         </a>
                     </li>
-                    <li class="catalog-toys-item">
-                        <a href="#" class="catalog-toys-link">
-                            <img src="../image/Brass.png" alt="product picture" class="catalog-toys-img" width="380px" height="385px">
-                            <span class="catalog-toys-desc">BRASS DECO FRAMES</span>
-                            <span class="catalog-toys-text">$66.00 USD</span>
+                    <li class="toys-item">
+                        <a href="#" class="toys-link">
+                            <img src="../image/Brass.png" alt="product picture" class="toys-img" width="380px" height="385px">
+                            <span class="toys-desc">BRASS DECO FRAMES</span>
+                            <span class="toys-text">$66.00 USD</span>
                         </a>
                     </li>
-                    <li class="catalog-toys-item">
-                        <a href="#" class="catalog-toys-link">
-                            <img src="../image/Cibo.png" alt="product picture" class="catalog-toys-img" width="380px" height="385px">
-                            <span class="catalog-toys-desc">CIBO FULL APRONER</span>
-                            <span class="catalog-toys-text">$60.00 USD</span>
+                    <li class="toys-item">
+                        <a href="#" class="toys-link">
+                            <img src="../image/Cibo.png" alt="product picture" class="toys-img" width="380px" height="385px">
+                            <span class="toys-desc">CIBO FULL APRONER</span>
+                            <span class="toys-text">$60.00 USD</span>
                         </a>
                     </li>
-                    <li class="catalog-toys-item">
-                        <a href="#" class="catalog-toys-link">
-                            <img src="../image/Gatcha.png" alt="product picture" class="catalog-toys-img" width="380px" height="385px">
-                            <span class="catalog-toys-desc">GATCHA GATCHA GUMBALL MACHINE</span>
-                            <span class="catalog-toys-text">$56.00 USD</span>
+                    <li class="toys-item">
+                        <a href="#" class="toys-link">
+                            <img src="../image/Gatcha.png" alt="product picture" class="toys-img" width="380px" height="385px">
+                            <span class="toys-desc">GATCHA GATCHA GUMBALL MACHINE</span>
+                            <span class="toys-text">$56.00 USD</span>
                         </a>
                     </li>
-                    <li class="catalog-toys-item">
-                        <a href="#" class="catalog-toys-link">
-                            <img src="../image/Chrastmas.png" alt="product picture" class="catalog-toys-img" width="380px" height="385px">
-                            <span class="catalog-toys-desc">CHRISTMAS ADVENT SCENTED CANDLE</span>
-                            <span class="catalog-toys-text">$29.00 USD</span>
+                    <li class="toys-item">
+                        <a href="#" class="toys-link">
+                            <img src="../image/Chrastmas.png" alt="product picture" class="toys-img" width="380px" height="385px">
+                            <span class="toys-desc">CHRISTMAS ADVENT SCENTED CANDLE</span>
+                            <span class="toys-text">$29.00 USD</span>
                         </a>
                     </li>
-                    <li class="catalog-toys-item">
-                        <a href="#" class="catalog-toys-link">
-                            <img src="../image/Tangle.png" alt="product picture" class="catalog-toys-img" width="380px" height="382px">
-                            <span class="catalog-toys-desc">TANGLE SPINNING TEA LIGHT</span>
-                            <span class="catalog-toys-text">$56.00 USD</span>
+                    <li class="toys-item">
+                        <a href="#" class="toys-link">
+                            <img src="../image/Tangle.png" alt="product picture" class="toys-img" width="380px" height="382px">
+                            <span class="toys-desc">TANGLE SPINNING TEA LIGHT</span>
+                            <span class="toys-text">$56.00 USD</span>
                         </a>
                     </li>
                 </ul>
             </div>
-            <div class="catalog-pagination">
-                <ul class="catalog-pagination-list">
-                    <li class="catalog-pagination-item">
-                        <button class="catalog-pagination-control-back"><svg width="18" height="30" viewBox="0 0 18 30" fill="Fast shippingne"
-                                xmlns="http://www.w3.org/2000/svg" class="catalog-pagination-img">
-                                <path d="M16 2L3 15L16 28" stroke="#1E0606" stroke-opacity="0.12" stroke-width="4" />
-                            </svg>
-                        </button>
+            <div class="pagination">
+                <button class="pagination-control-back"><svg width="18" height="30" viewBox="0 0 18 30"
+                    fill="Fast shippingne" xmlns="http://www.w3.org/2000/svg" class="page-img">
+                    <path d="M16 2L3 15L16 28" stroke="#1E0606" stroke-opacity="0.12" stroke-width="4" />
+                </svg>
+            </button>
+                <ul class="pagination-list">
+                    <li class="pagination-item">
+                        <button class="pagination-button">1</button>
                     </li>
-                    <li class="catalog-pagination-item">
-                        <a href="#" class="catalog-pagination-link">1</a>
+                    <li class="pagination-item">
+                        <button class="pagination-button">2</button>
                     </li>
-                    <li class="catalog-pagination-item">
-                        <a href="#" class="catalog-pagination-link">2</a>
+                    <li class="pagination-item">
+                        <button class="pagination-button">3</button>
                     </li>
-                    <li class="catalog-pagination-item">
-                        <a href="#" class="catalog-pagination-link">3</a>
+                    <li class="pagination-item">
+                        <button class="pagination-button">4</button>
                     </li>
-                    <li class="catalog-pagination-item">
-                        <a href="#" class="catalog-pagination-link">4</a>
-                    </li>
-                    <li class="catalog-pagination-item">
-                        <button class="catalog-pagination-control-forward"><svg width="18" height="30" viewBox="0 0 18 30" fill="Fast shippingne"
-                                xmlns="http://www.w3.org/2000/svg" class="catalog-pagination-img">
+                </ul>
+                        <button class="pagination-control-forward"><svg width="18" height="30" viewBox="0 0 18 30"
+                                fill="Fast shippingne" xmlns="http://www.w3.org/2000/svg" class="page-img">
                                 <path d="M2 2L15 15L2 28" stroke="#1E0606" stroke-opacity="0.12" stroke-width="4" />
                             </svg>
                         </button>
-                    </li>
-                </ul>
             </div>
         </section>
     </main>
