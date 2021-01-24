@@ -1,0 +1,326 @@
+.title {
+    margin-top: 60px;
+    font-size: 40px;
+    line-height: 49px;
+}
+
+/*Toys-form*/
+.form-toys {
+    margin-top: 50px;
+    background-color: rgba(125, 151, 218, 0.2);
+}
+
+.form-toys-wrap {
+    display: flex;
+    padding-top: 42px;
+    padding-bottom: 42px;
+    border: 0px;
+}
+
+.form-toys-field{
+    margin-right: 80px;
+    border: 0px;
+}
+.form-toys-scale {
+    position: relative;
+    display: flex;
+}
+.form-toys-scale-strip{
+    margin-top: 25px;
+    width: 46px;
+    height: 4px;
+    background-color: #C29974;
+}
+
+.form-toys-scale-circle{
+    position: absolute;
+    top: 15px;
+    left: 35px;
+}
+
+.form-toys-scale-circle:hover{
+    cursor: pointer;
+}
+
+.form-toys-scale-text{
+    display: flex;
+}
+
+.form-toys-scale-desc{
+    margin-top: 16px;
+    margin-right: 165px;
+}
+
+.form-toys-scale-desc:last-child{
+    margin-right: 0px;
+}
+
+.form-toys-scale-rectangle{
+    margin-top: 25px;
+    left: 58px;
+    width: 142px;
+    height: 4px;
+    background: #000000;
+    opacity: 0.5;
+}
+.form-toys-legend{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: #1E0606;
+}
+
+.form-toys-input{
+    margin-top: 15px;
+}
+
+.color-item {
+    margin-top: 15px;
+}
+
+.form-toys-label {
+    position: relative;
+    margin-left: 29px;
+}
+
+.form-toys-label::before{
+    content: '';
+    position: absolute;
+    left: -29px;
+    top: 0px;
+    width: 19px;
+    height: 19px;
+    border: 2px solid #C29974;
+    box-sizing: border-box;
+    border-radius: 3px;
+    
+}
+
+.form-toys-label::after{
+    content: '';
+    position: absolute;
+    left: -26px;
+    top: 1px;
+    width: 15px;
+    height: 15px;
+    background-image: url('/image/CheckmarkToys.svg');
+    background-repeat: no-repeat;
+    opacity: 0;
+}
+
+.form-toys-input:checked + .form-toys-label::after{
+    opacity: 1;
+}
+
+.form-toys-label:hover{
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+.form-toys-input:disabled + .form-toys-label{
+    opacity: 0.5;
+} 
+
+.delivery-item {
+    margin-top: 10px;
+}
+
+
+.form-toys-label-delivery {
+    position: relative;
+    margin-left: 30px;
+}
+
+.form-toys-label-delivery::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: -30px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #C29974;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+
+.form-toys-label-delivery::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: -26px;
+    width: 12px;
+    height: 12px;
+    background-color: #C29974;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.form-toys-input:checked + .form-toys-label-delivery::after {
+    opacity: 1;
+}
+
+.form-toys-label-delivery:hover{
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+.form-toys-input:disabled + .form-toys-label-delivery{
+    opacity: 0.5;
+} 
+
+
+.amount-list{
+    display: flex;
+    margin-top: 15px;
+}
+
+.amount-item{
+    position: relative;
+    width: 80px;
+    padding-top: 7px;
+    padding-bottom: 6px;
+    text-align: center;
+    background-color: #FFFFFF;
+    z-index: 1;
+}
+
+
+.form-toys-label-amount::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 80px;
+    height: 35px;
+    background-color: #F3D0DB;
+    z-index: -1;
+    opacity: 0;
+}
+.form-toys-input:checked +  .form-toys-label-amount::after{
+    opacity: 1;
+}
+
+.amount-item:hover{
+    color:#877379;
+    background-color: #EDDEEB;
+}
+
+.form-toys-label-amount:hover{
+    cursor: pointer;
+}
+
+/*Toys-block*/
+.toys-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.toys-item{
+    position: relative;
+    margin-top: 20px;
+}
+
+.toys-item-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #1E0606;
+}
+
+.toys-item-link:hover:before{
+    content: 'Learn more';
+    position: absolute;
+    padding-left: 11px;
+    padding-top: 82px;
+    padding-bottom: 96px;
+    padding-right: 12px;
+    top: 89px;
+    left: 87px;
+    width: 207px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 29px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #1E0606;
+    background: #E5EAF8;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.toys-item-link:active:before{
+    opacity: 0.67;
+}
+
+.toys-item-desc {
+    margin-top: 30px;
+    
+}
+
+.toys-item-text {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+/*Pagination*/
+.pagination{
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+}
+
+button {
+    border: 0;
+    background: transparent;
+}
+
+.pagination-list{
+    display: flex;
+}
+
+.pagination-control-back{
+    margin-right: 457px;
+    padding: 0px;
+}
+
+
+.pagination-item{
+    margin-right: 67px;
+
+}
+
+.pagination-button--active{
+    color: #C29974;
+}
+
+.pagination-button{
+    padding: 0px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+.pagination-item:last-child{
+    margin-right: 0px;
+}
+
+.pagination-control-forward{
+    margin-left: 457px;
+    padding: 0px;
+}

@@ -1,0 +1,295 @@
+/*Hero*/
+
+.hero-holder{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 129px;
+    min-height: 372px;
+    background-color: #EEE4DB;
+}
+
+.hero-wrapper{
+    margin-top: 17px;
+    margin-left: 28px;
+    margin-right: 44px;
+}
+
+.hero-desc{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 60px;
+    line-height: 73px;
+    color: #1e06060d;
+}
+
+.hero-list{
+    margin-top: 10px;
+}
+
+.hero-item{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 31px;
+    height: 3px;
+}
+
+.hero-btn {
+    border: 0;
+   background: transparent;
+   background-color: #D6CAC2;
+   cursor: pointer;
+}
+
+.hero-btn-active{
+    background-color:#1e060699;
+}
+
+.hero-btn:hover{
+    background-color:#1e060699;
+}
+
+.hero-wrap {
+    margin-top: 89px;
+}
+
+.hero-title{
+    max-width: 307px;
+}
+
+.hero-text{
+    margin-top: 20px;
+}
+
+.hero-txt{
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #C29974;
+}
+.hero-button{
+    margin-top: 20px;
+}
+
+/*Products*/
+.products{
+    margin-top: 90px;
+}
+ 
+.products-list {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.products-item {
+    position: relative;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 280px;
+    height: 270px;
+    margin-right: 20px;
+}
+ 
+
+.products-link{
+    position: absolute;
+    top: 103px;
+    left: 50%;
+    margin-left: -69px;
+    max-width: 129px;
+    font-size: 26px;
+    line-height: 32px;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color:  #FFFFFF;
+}
+
+.products-link:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.products-link:active{
+    text-decoration: underline;
+}
+
+.products-text {
+    display: flex;
+    margin-top: 30px;
+}
+
+.products-control-back {
+    margin-right: 6px;
+    width: 37px;
+    height: 37px;   
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    background-color: rgba(112, 187, 220, 0.2);;
+}
+
+.products-control-forward {
+    margin-right: 20px;
+    width: 37px;
+    height: 37px;   
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    background-color: rgba(112, 187, 220, 0.2);;
+}
+
+.products-desc {
+    max-width: 580px;
+}
+
+/*Delivery*/
+.delivery {
+    display: flex;
+    margin-top: 90px;
+}
+
+.delivery-img {
+    margin-right: 121px;
+}
+
+.delivery-txt-subtitle{
+    margin-top: 30px;
+
+}
+
+.delivery-txt-btn {
+    margin-top: 22px;
+    font-family: 'Crimson Text';
+    font-style: italic;
+    font-size: 26px;
+    line-height: 32px;
+    color: #1E0606;
+    border: 0;
+    background: transparent;
+}
+
+.delivery-txt-btn-active{
+    position: relative;
+    font-weight: bold;
+}
+
+.delivery-txt-btn-active::before{
+    content: '';
+    position: absolute;
+    width: 326px;
+    height: 55px;
+    top: -11px;
+    left: -60px;
+    background-color: rgba(112, 187, 220, 0.2);
+    z-index: -1;
+}
+
+
+
+.delivery-txt-desc{
+    margin-top: 15px;
+    max-width: 480px;
+}
+
+.delivery-txt-desc:first {
+    margin-top: 30px;
+}
+
+.delivery-txt-link {
+    margin-top: 35px;
+    width: 105px;
+    height: 22px;
+}
+
+/*Partners*/
+.partners {
+    margin-top: 91px;
+    max-width: 1180px;
+}
+.parthers-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.partners-list-item{
+    padding-right: 127px;
+}
+
+.partners-list-item:last-child{
+    padding-right: 0px;
+}
+
+/*info*/
+.info-wrapper{
+    display: flex;
+    margin-top: 90px;
+    margin-left: 30px;
+    margin-right: 67px;
+}
+
+.info-about-us{
+    position: relative;
+}
+
+.info-about-us::before{
+    content: '';
+    position: absolute;
+    top: 23px;
+    left: -30px;
+    width: 543px;
+    height: 236px;
+    background-color: #E1F0F7;
+    z-index: -1;
+}
+
+.info-contacts{
+    position: relative;
+}
+
+.info-contacts::before{
+    content: '';
+    position: absolute;
+    top: 23px;
+    left: -30px;
+    width: 543px;
+    height: 209px;
+    background-color: #E1F0F7;
+    z-index: -1;
+  
+}
+
+.info-about-us-subtitle{
+    margin-top: 10px;
+}
+
+.info-about-us-text{
+    margin-top: 10px;
+    margin-right: 117px;
+    width: 483px;
+}
+
+.info-about-us-button{
+    margin-top: 20px;
+}
+
+.info-contacts-desc{
+    margin-top: 20px;
+    width: 483px;
+}
+
+.info-contacs-img{
+    margin-top: 20px;
+}
