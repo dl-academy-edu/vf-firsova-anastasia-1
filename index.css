@@ -1,9 +1,9 @@
 /*Hero*/
-
 .hero-holder{
     display: flex;
+    position: relative;
     flex-wrap: wrap;
-    margin-top: 129px;
+    margin-top: 125px;
     min-height: 372px;
     background-color: #EEE4DB;
 }
@@ -61,9 +61,14 @@
 }
 
 .hero-text{
-    margin-top: 20px;
+    margin-top: 18px;
+    font-size: 20px;
 }
-
+.slider-img{
+    position: absolute;
+    left: 445px;
+    bottom: 0px;
+}
 .hero-txt{
     padding-top: 11px;
     padding-bottom: 11px;
@@ -77,12 +82,17 @@
     background-color: #C29974;
 }
 .hero-button{
-    margin-top: 20px;
+    margin-top: 16px;
 }
 
 /*Products*/
 .products{
     margin-top: 90px;
+}
+
+.products-title{
+    font-size: 38px;
+    line-height: 46px;
 }
  
 .products-list {
@@ -104,24 +114,25 @@
 
 .products-link{
     position: absolute;
+    text-align: center;
     top: 103px;
     left: 50%;
-    margin-left: -69px;
-    max-width: 129px;
+    transform: translateX(-50%);
+    max-width: 192px;
     font-size: 26px;
     line-height: 32px;
-    align-items: center;
-    text-align: center;
     text-decoration: none;
     color:  #FFFFFF;
 }
 
-.products-link:hover{
+.products-item:hover .products-link,
+.products-item:hover{
     text-decoration: underline;
     cursor: pointer;
 }
 
-.products-link:active{
+.products-item:active .products-link,
+.products-item:active{
     text-decoration: underline;
 }
 
@@ -131,6 +142,7 @@
 }
 
 .products-control-back {
+    margin-top: 5px;
     margin-right: 6px;
     width: 37px;
     height: 37px;   
@@ -140,7 +152,12 @@
     background-color: rgba(112, 187, 220, 0.2);;
 }
 
+.products-control-back:hover{
+    opacity: 0.5;
+}
+
 .products-control-forward {
+    margin-top: 5px;
     margin-right: 20px;
     width: 37px;
     height: 37px;   
@@ -150,6 +167,10 @@
     background-color: rgba(112, 187, 220, 0.2);;
 }
 
+.products-control-forward:hover{
+    opacity: 0.5;
+}
+
 .products-desc {
     max-width: 580px;
 }
@@ -157,20 +178,22 @@
 /*Delivery*/
 .delivery {
     display: flex;
+    justify-content: space-between;
     margin-top: 90px;
 }
 
-.delivery-img {
-    margin-right: 121px;
+.delivery-txt{
+    margin-right: 100px;
 }
 
 .delivery-txt-subtitle{
-    margin-top: 30px;
-
+    margin-top: 32px;
+    font-size: 38px;
+    line-height: 46px;
 }
 
 .delivery-txt-btn {
-    margin-top: 22px;
+    margin-top: 21px;
     font-family: 'Crimson Text';
     font-style: italic;
     font-size: 26px;
@@ -190,25 +213,57 @@
     position: absolute;
     width: 326px;
     height: 55px;
-    top: -11px;
+    top: -15px;
     left: -60px;
     background-color: rgba(112, 187, 220, 0.2);
     z-index: -1;
 }
 
 
+.delivery-txt-btn-active::after{
+    content: '';
+    position: absolute;
+    width: 326px;
+    height: 55px;
+    top: -15px;
+    left: -60px;
+    background-color: rgba(112, 187, 220, 0.2);
+    z-index: -1;
+}
 
+.delivery-txt-btn{
+    position: relative;
+    padding: 0px;
+}
+
+.delivery-txt-btn:hover{
+    cursor: pointer;
+}
+
+
+.delivery-txt-btn:hover::before{
+    content: '';
+    position: absolute;
+    width: 326px;
+    height: 55px;
+    top: -15px;
+    left: -60px;
+    background-color: rgba(112, 187, 220, 0.2);
+    cursor: pointer;
+    z-index: -1;
+}
+  
 .delivery-txt-desc{
-    margin-top: 15px;
+    margin-top: 30px;
     max-width: 480px;
 }
 
-.delivery-txt-desc:first {
-    margin-top: 30px;
+.delivery-txt-desc:nth-child(4){
+    margin-top: 16px;
 }
 
 .delivery-txt-link {
-    margin-top: 35px;
+    margin-top: 27px;
     width: 105px;
     height: 22px;
 }
@@ -220,7 +275,7 @@
 }
 .parthers-list {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -235,12 +290,13 @@
 /*info*/
 .info-wrapper{
     display: flex;
-    margin-top: 90px;
-    margin-left: 30px;
-    margin-right: 67px;
+    max-width: 1143px;
+    justify-content: space-between;
+    margin-top: 88px;
 }
 
 .info-about-us{
+    padding-left: 30px;
     position: relative;
 }
 
@@ -248,15 +304,21 @@
     content: '';
     position: absolute;
     top: 23px;
-    left: -30px;
+    left: 0px;
     width: 543px;
     height: 236px;
     background-color: #E1F0F7;
     z-index: -1;
 }
 
+.info-about-us-title{
+    font-size: 38px;
+    line-height: 46px;
+}
+
 .info-contacts{
     position: relative;
+    margin-right: 37px;
 }
 
 .info-contacts::before{
@@ -269,6 +331,11 @@
     background-color: #E1F0F7;
     z-index: -1;
   
+}
+
+.info-contacts-title {
+    font-size: 38px;
+    line-height: 46px;
 }
 
 .info-about-us-subtitle{
@@ -286,7 +353,7 @@
 }
 
 .info-contacts-desc{
-    margin-top: 20px;
+    margin-top: 18px;
     width: 483px;
 }
 

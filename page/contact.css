@@ -1,30 +1,25 @@
 .title {
-    margin-top: 60px;
+    margin-top: 57px;
     font-size: 40px;
     line-height: 49px;
 }
 
 .contact-block {
     display: flex;
+    justify-content: space-between;
+    margin-top: 47px;
 }
 
 /*Contact-info*/
 .contact-info {
-    margin-top: 50px;
-}
-
-.contact-info-desc {
-    margin-top: 20px;
     width: 380px;
 }
 
-.contact-info-desc:first-child{
-    margin-top: 0px;
+.contact-info-desc {
+  padding-bottom: 20px;
 }
 
-
 .contact-info-text{
-    margin-top: 20px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;

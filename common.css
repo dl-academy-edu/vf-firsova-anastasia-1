@@ -37,7 +37,6 @@ h1, h2, p, span {
     padding: 0 110px
 }
 
-
 .caption {
     font-family: 'Montserrat';
     font-style: normal;
@@ -45,7 +44,6 @@ h1, h2, p, span {
     font-size: 40px;
     line-height: 44px;
     text-transform: uppercase;
-
 }
 
 .subtitle {
@@ -142,6 +140,7 @@ h1, h2, p, span {
 }
 
 .header-search:hover{
+    cursor: pointer;
     opacity: 0.5;
 }
 
@@ -176,8 +175,19 @@ h1, h2, p, span {
 }
 
 .breadcrumbs-item{
-    margin-right: 53px;
+    padding-right: 50px;
 }
+
+.breadcrumbs-item:hover .breadcrumbs-link{
+    text-decoration: underline;
+    cursor: pointer;
+} 
+
+.breadcrumbs-item:active .breadcrumbs-link{
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.5;
+} 
 
 .breadcrumbs-link {
     font-family: 'Crimson Text';
@@ -198,44 +208,117 @@ h1, h2, p, span {
 .breadcrumbs-link--active::after{
     content: '';
     position: absolute;
-    margin-top: 5px;
-    margin-left: 20px;
-    margin-right: 20px;
+    top: 2px;
+    left: 62px;
     width: 8px;
     height: 12px;
     background-image: url('/image/Breadcrumbs.svg');
+    background-repeat: no-repeat;
+}
+
+/*Pagination*/
+.pagination{
+    display: flex;
+    margin-top: 46px;
+    align-items: center;
+}
+
+button {
+    border: 0;
+    background: transparent;
+}
+
+.pagination-list{
+    display: flex;
+}
+
+.pagination-control-back{
+    margin-right: 455px;
+    padding: 0px;
+}
+
+.pagination-control-back path{
+    fill:  none;
+}
+
+.pagination-control-back:hover path{
+    cursor: pointer;
+    fill: #C29974;
+}
+
+.pagination-control-back:active path{
+    cursor: pointer;
+    fill: #C29974;
+    opacity: 0.5;
+}
+
+.pagination-item{
+    margin-right: 66px;
+}
+
+.pagination-button--active{
+    color: #C29974;
+}
+
+.pagination-button{
+    padding: 0px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+.pagination-button:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.pagination-item:last-child{
+    margin-right: 0px;
+}
+
+.pagination-control-forward{
+    margin-left: 457px;
+    padding: 0px;
+}
+
+.pagination-control-forward path{
+    fill:  none;
+}
+
+.pagination-control-forward:hover path{
+    cursor: pointer;
+    fill: #C29974;
+}
+
+.pagination-control-forward:active path{
+    cursor: pointer;
+    fill: #C29974;
+    opacity: 0.5;
 }
 
 /*Footer*/
 .footer{
-    margin-top: 58px;
-    padding: 0;
+    margin-top: 56px;
     background-color: #434343;
 }
 
 .footer-wrapper{
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    padding-top: 18px;
     padding-bottom: 23px;
     border-bottom: 1px solid #666666;
-}
-.footer-wrapper:first-child{
-    padding-top: 0px;
 }
 
 .footer-text{
     margin-top: 99px;
-    margin-right: 20px;
     padding-bottom: 23px;
     width: 380px;
     border-bottom: 1px solid #666666;
     color: #AAAAAA;
-}
-
-.footer-text:last-child{
-    margin-right: 0px;
 }
 
 .footer-list {
@@ -249,8 +332,8 @@ h1, h2, p, span {
 
 .footer-navigation-list-item{
     margin-top: 15px;
-        text-decoration: none;
-   color: #FFFFFF;
+    text-decoration: none;
+     color: #FFFFFF;
 }
 
 .footer-navigation-list-item:last-child{
@@ -337,16 +420,14 @@ h1, h2, p, span {
 
 .footer-bottom-rating{
     display: flex;
-    padding-right: 168px;
+    padding-top: 15px;
 }
 
-/* .footer-bottom-rating:hover  .footer-bottom-rating-desc{
+.footer-bottom-rating:hover .footer-bottom-rating-desc{
     color: #C29974;
 }
 
-.footer-bottom-rating:active  .footer-bottom-rating-desc{
-    color: #C29974;
-} */
+
 
 .footer-bottom-rating-desc{
     padding-right: 110px;
@@ -356,10 +437,11 @@ h1, h2, p, span {
 
 .footer-bottom-rating-group{
     position: relative;
-    width: 84px;
+    margin-top: 6px;
+    width: 97px;
     height: 16px;
     background-image: url('/image/StarOff.svg');
-    background-size: 17px 16px;
+    background-size: 20px 16px;
     background-repeat: repeat-x;
 }
 
@@ -371,10 +453,17 @@ h1, h2, p, span {
     width: 17px;
     height: 16px;
     font-size: inherit;
-    background-size: 17px 16px;
+    background-size: 20px 16px;
     appearance: none;
 }
 
+
+.footer-bottom-rating-input:focus ~ .footer-bottom-rating-focus{
+    outline: solid 3px #ffffff;
+    outline-offset: 5px;
+    width: 97px;
+    height: 16px;
+}
 
 .footer-bottom-rating-input:checked + .footer-bottom-rating-star,
 .footer-bottom-rating-star:hover {
@@ -392,29 +481,37 @@ h1, h2, p, span {
 }
 
 .footer-bottom-rating-star:nth-of-type(2){
-    width: 34px;
+    width: 37px;
     z-index: 4;
 }
 
 .footer-bottom-rating-star:nth-of-type(3){
-    width: 51px;
+    width: 57px;
     z-index: 3;
 }
 
 .footer-bottom-rating-star:nth-of-type(4){
-    width: 68px;
+    width: 77px;
     z-index: 2;
 }
 
 .footer-bottom-rating-star:nth-of-type(5){
-    width: 85px;
+    width: 97px;
     z-index: 1;
+}
+
+.footer-bottom-rating-text{
+    padding-top: 15px;
+    padding-left: 45px;
+    color: #FFFFFF;
+    margin-bottom: 104px;
 }
 
 .footer-bottom-rating-link{
     text-decoration: none;
     color: #A2A2A2;
-    margin-top: 4px;
+    padding-top: 23px;
+    padding-right: 82px;
     margin-bottom: 110px;
 }
 
@@ -429,6 +526,7 @@ h1, h2, p, span {
     color: #FFFFFF;
 }
 
+
 /*Contact Form & Form Popup*/
 .popup {
     display: none;
@@ -439,18 +537,28 @@ h1, h2, p, span {
     z-index: 1;
 }
 
+.popup.open {
+    display: block;
+}
+
 .popup-button{
     position: absolute;
     left: 690px;
-    width: 15px;
-    height: 15px;
-    background-image: url('/image/Cross.svg'); 
-    background-repeat: no-repeat;
     border: none;
     cursor: pointer;
 }
 
-/* .popup-overlay{
+.popup-button:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.popup-button:active{
+    opacity: 0.2;
+    cursor: pointer;
+}
+
+.popup-overlay{
     display: none;
     position: fixed;
     top: 0px;
@@ -459,9 +567,14 @@ h1, h2, p, span {
     height: 100%;
     background: rgba(125, 151, 218, 0.8);
     z-index: 0;
-} */
+}
+
+.popup-overlay.show{
+    display: block;
+}
+
 .form {
-    padding: 33px 40px;
+    padding: 36px 40px;
     max-width: 680px;
     background-color: #E5EAF8;
 }
@@ -479,7 +592,7 @@ h1, h2, p, span {
 .field{
     display: flex;
     flex-direction: row;
-    margin-top: 20px;
+    margin-top: 14px;
 }
 
 .field .input-wrapper{
@@ -492,7 +605,7 @@ h1, h2, p, span {
 }
 
 .form-label {
-    margin-top: 3px;
+    margin-top: 5px;
     font-size: 14px;
     line-height: 19px;
 }
@@ -502,7 +615,7 @@ h1, h2, p, span {
 }
 
 .input-wrapper .form-input {
-    
+    margin-top: 6px;
     margin-left: 0px;
     padding: 0px 20px;
     height: 50px;
@@ -524,10 +637,11 @@ h1, h2, p, span {
 .textarea-wrapper {
     display: flex;
     flex-direction: column-reverse;
-    margin-top: 20px;
+    margin-top: 12px;
 }
 
 .textarea-wrapper .form-input{
+    margin-top: 4px;
     width: 600px;
     max-height: 150px;
     background: #FFFFFF;
@@ -544,7 +658,7 @@ h1, h2, p, span {
 }
 
 .checkbox-wrapper {
-    margin-top: 22px;
+    margin-top: 20px;
 }
 
 .checkbox-wrapper .form-label{
@@ -584,15 +698,16 @@ h1, h2, p, span {
     opacity: 1;
 }
 
-.form-checkbox-input:hover{
+.checkbox-label:hover{
     text-decoration-line: underline;
     cursor: pointer;
 }
 
-.form-checkbox-input:disabled + .checkbox-label{
+.form-checkbox-input:disabled {
     opacity: 0.5;
 } 
 
 .form-button{
     margin-top: 17px;
+    margin-bottom: 13px;
 }
