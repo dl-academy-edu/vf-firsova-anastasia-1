@@ -1,17 +1,27 @@
 .title {
     margin-top: 56px;
+    padding-left: 20px;
     line-height: 49px;
 }
 /*Catalog*/
+.catalog{
+    padding-left: 20px;
+}
+
 .catalog-list {
-    margin-top: 47px;
+    margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .catalog-item {
     position: relative;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 280px;
     height: 270px;
     margin-right: 19px;
@@ -35,7 +45,9 @@
     text-align: center;
     top: 103px;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     max-width: 192px;
     font-size: 26px;
     line-height: 32px;
@@ -55,7 +67,8 @@
 /*Product*/
 .product {
     margin-top: 55px;
-    margin-left: 200px;
+    margin-left: 220px;
+    margin-bottom: 55px;
     max-width: 680px;
 }
 .product-title {

@@ -1,22 +1,30 @@
 .title {
+    padding-left: 20px;
     margin-top: 56px;
     line-height: 49px;
 }
 
 /*Blog*/
 .blog{
+    padding-left: 20px;
     margin-bottom: 58px;
 }
 .blog-list {
-    margin-top: 30px;
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 .blog-item {
     width: 380px;
     margin-right: 20px;
-    margin-top: 20px;
+    margin-top: 32px;
 }
 
 .blog-item:nth-child(3n) {
@@ -36,8 +44,13 @@
 }
 
 .blog-item-link{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 380px;
     text-decoration: none;
 }
@@ -72,4 +85,11 @@
     font-size: 18px;
     line-height: 25px;
     color: #1E0606;
+}
+
+/* Pagination */
+
+.pagination-control-back {
+    margin-right: 436px;
+    padding: 0px;
 }
