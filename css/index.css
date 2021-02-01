@@ -22,7 +22,7 @@
 .hero-desc{
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', 'Calibri',  sans-serif;;
     font-style: normal;
     font-weight: 300;
     font-size: 60px;
@@ -83,7 +83,11 @@
     margin-left: 20px;
     padding-top: 11px;
     padding-bottom: 11px;
-    width: 1180px;
+    padding-left: 10px;
+    padding-right: 10px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 1160px;
     font-size: 12px;
     line-height: 16px;
     text-align: center;
@@ -95,6 +99,7 @@
 }
 .hero-button{
     margin-top: 18px;
+    margin-bottom: 20px;
 }
 
 /*Products*/
@@ -123,17 +128,36 @@
 }
 
 .products-item {
+    flex-direction: column-reverse;
     position: relative;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    margin-right: 20px;
     width: 280px;
     height: 270px;
-    margin-right: 20px;
 }
  
+.products-item:nth-child(1){
+    background-color: #DBE4DB;
+}
+
+.products-item:nth-child(2){
+    background-color: #EADDD3;
+}
+
+.products-item:nth-child(3){
+    background-color: #F8F2DA;
+}
+
+.products-item:nth-child(4){
+    background-color: #D5D4E1;
+}
+
+.products-img {
+    margin-top: 50%;
+    margin-left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
 
 .products-link{
     position: absolute;
@@ -148,6 +172,7 @@
     line-height: 32px;
     text-decoration: none;
     color:  #FFFFFF;
+    z-index: 1;
 }
 
 .products-item:hover .products-link,
@@ -231,9 +256,9 @@
     position: relative;
     padding: 0px;
     margin-top: 21px;
-    font-family: 'Crimson Text';
+    font-family: 'Crimson Text', 'Book Antiqua', serif;
     font-style: italic;
-    font-weight: bold;
+    font-weight: normal;
     font-size: 26px;
     line-height: 32px;
     color: #1E0606;
@@ -315,10 +340,22 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
 }
 
 .partners-list-item{
     padding-right: 127px;
+}
+
+.partners-list-item:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.partners-list-item:active{
+    opacity: 0.2;
+    cursor: pointer;
 }
 
 .partners-list-item:last-child{
@@ -330,14 +367,18 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     max-width: 1143px;
     margin-top: 88px;
-    margin-bottom: 56px;
+    margin-bottom: 61px;
 }
 
 .info-about-us{
     padding-left: 50px;
     position: relative;
+    min-height: 236px;
 }
 
 .info-about-us::before{
@@ -346,7 +387,7 @@
     top: 23px;
     left: 20px;
     width: 543px;
-    height: 236px;
+    height: 69%;
     background-color: #E1F0F7;
     z-index: -1;
 }
@@ -358,18 +399,19 @@
 
 .info-contacts{
     position: relative;
+    width: 543px;
+    min-height: 209px;
 }
 
 .info-contacts::before{
     content: '';
     position: absolute;
-    top: 23px;
+    top: 25px;
     left: -30px;
     width: 543px;
-    height: 209px;
+    height: 60%;
     background-color: #E1F0F7;
     z-index: -1;
-  
 }
 
 .info-contacts-title {
@@ -378,12 +420,11 @@
 }
 
 .info-about-us-subtitle{
-    margin-top: 6px;
-    font-size: 22px;
+    margin-top: 10px;
 }
 
 .info-about-us-text{
-    margin-top: 13px;
+    margin-top: 9px;
     margin-right: 117px;
     width: 483px;
 }
@@ -397,6 +438,14 @@
     width: 483px;
 }
 
-.info-contacs-img{
+.info-contact-map{
     margin-top: 20px;
+    width: 483px;
+    height: 196px;
+}
+
+.info-contact-map iframe{
+    width: 100%;
+    height: 100%;
+    border: 0px;
 }

@@ -109,7 +109,7 @@
 
 input:focus + label {
     outline-color: #000000;
-    outline-offset: -2px;
+    outline-offset: 3px;
     outline-style: auto;
     outline-width: 5px;
 }
@@ -238,10 +238,19 @@ input:focus + label {
     opacity: 1;
 }
 
+.form-toys-input:disabled + .form-toys-label-amount::after{
+    opacity: 0.5;
+    background-color: #C1C1C1;
+}
+
+.form-toys-input:disabled + .form-toys-label-amount{
+    color: #908484;
+}
+
 .amount-item:hover{
     color:#877379;
     background-color: #EDDEEB;
-}
+} 
 
 .form-toys-label-amount:hover{
     cursor: pointer;
@@ -250,6 +259,7 @@ input:focus + label {
 .form-toys-button{
     margin-top: 36px;
     width: 96px;
+    height: 40px;
 }
 
 /*Toys-block*/
@@ -316,7 +326,7 @@ input:focus + label {
     top: 89px;
     left: 87px;
     width: 207px;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', 'Calibri',  sans-serif;;
     font-style: normal;
     font-weight: bold;
     font-size: 26px;

@@ -30,7 +30,7 @@
                 
             </ul>
         </nav>
-        <button class="header-search">
+        <button class="header-search" aria-label="search">
             <img src="../image/search.png" alt="loupe" class="header-search-img" width="17" height="17">
         </button>
         <a href="./contact.html" class="header-contact">Contact us</a>
@@ -103,7 +103,7 @@
                     </li>
                 </ul>
                 <div class="pagination">
-                    <button class="pagination-control-back"><svg  width="18" height="29" viewBox="0 0 18 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <button class="pagination-control-back"  aria-label="go to the previous page"><svg  width="18" height="29" viewBox="0 0 18 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0,14.4l14.4,14.4l2.8-2.8L5.7,14.4L17.2,2.8L14.4,0L0,14.4z"/>
                         </svg>                        
                     </button>
@@ -121,7 +121,7 @@
                             <button class="pagination-button">4</button>
                         </li>
                     </ul>
-                    <button class="pagination-control-forward"><svg width="18" height="29" viewBox="0 0 18 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <button class="pagination-control-forward"  aria-label="go to the next page"><svg width="18" height="29" viewBox="0 0 18 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M2.82846 0L3.62396e-05 2.82843L11.5858 14.4142L3.62396e-05 26L2.82846 28.8284L17.2427 14.4142L2.82846 0Z"/>
                         </svg>                        
                     </button>
@@ -234,7 +234,6 @@
             </div>
           <div class="footer-wrapper">
             <div class="footer-bottom-rating">
-                <p class="footer-bottom-rating-desc">Company Rating</p>
                 <div class="footer-bottom-rating-group">
                     <input class="footer-bottom-rating-input visually-hidden" type="radio" name="star" id="star-1" value="1">
                     <label class="footer-bottom-rating-star" for="star-1" aria-label="Ужасно"></label>
@@ -246,7 +245,7 @@
                     <label class="footer-bottom-rating-star" for="star-4" aria-label="Хорошо"></label>
                     <input class="footer-bottom-rating-input visually-hidden" type="radio" name="star" id="star-5" value="5">
                     <label class="footer-bottom-rating-star" for="star-5" aria-label="Отлично"></label>
-                    <div class="footer-bottom-rating-focus"></div>
+                    <span class="footer-bottom-rating-desc">Company Rating</span>
                 </div>
             </div>
             <p class="footer-bottom-rating-text">Copyright © 2018 Dlk • Design Life Kids</p>

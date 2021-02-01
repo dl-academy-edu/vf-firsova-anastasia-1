@@ -40,7 +40,7 @@ h1, h2, p, span {
 }
 
 .caption {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', 'Calibri',  sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 40px;
@@ -49,9 +49,9 @@ h1, h2, p, span {
 }
 
 .subtitle {
-    font-family: 'Crimson Text';
+    font-family: 'Crimson Text', 'Book Antiqua', serif;
     font-style: italic;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 26px;
     line-height: 32px;
 }
@@ -62,7 +62,6 @@ h1, h2, p, span {
     display: flex;
     padding: 9px 22px;
     min-width: 80px;
-    height: 40px;
     text-align: center;
     font-style: normal;
     font-weight: bold;
@@ -107,11 +106,6 @@ h1, h2, p, span {
     padding-top: 50px;
 }
 
-.header-menu-nav{
-    margin-bottom: 5px;
-    margin-right: auto;
-}
-
 .header-img{
     padding-left: 20px;
     padding-right: 60px;
@@ -125,6 +119,10 @@ h1, h2, p, span {
     opacity: 0.2;
 }
 
+.header-menu-nav{
+    margin-right: auto;
+}
+
 .header-menu-list{
     display:-webkit-box;
     display:-ms-flexbox;
@@ -133,6 +131,9 @@ h1, h2, p, span {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 780px;
 }
 
 .header-menu-items-link {
@@ -204,7 +205,7 @@ h1, h2, p, span {
 .breadcrumbs-item{
     position: relative;
     padding-left: 20px;
-    padding-right: 30px;
+    padding-right: 25px;
     letter-spacing: 1px;
 }
 
@@ -245,10 +246,10 @@ opacity: 0;
 } 
 
 .breadcrumbs-link {
-    font-family: 'Crimson Text';
+    font-family: 'Crimson Text', 'Book Antiqua', serif;
     font-style: italic;
     font-weight: normal;
-    font-size:18px;
+    font-size: 20px;
     line-height: 25px;
     text-decoration: none;
     color: #1E0606;
@@ -259,17 +260,6 @@ opacity: 0;
     position: relative;
     opacity: 1;
 }
-
-/* .breadcrumbs-link--active::after{
-    content: '';
-    position: absolute;
-    top: 6px;
-    left: 62px;
-    width: 8px;
-    height: 12px;
-    background-image: url('/image/Breadcrumbs.svg');
-    background-repeat: no-repeat;
-} */
 
 /*Pagination*/
 .pagination{
@@ -325,7 +315,7 @@ button {
 
 .pagination-button{
     padding: 0px;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', 'Calibri',  sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
@@ -510,20 +500,14 @@ button {
     opacity: 0.2;
 }
 
-.footer-bottom-rating .footer-bottom-rating-desc{
-    padding-right: 25px;
-    color: #FFFFFF;
-}
-
 .footer-bottom-rating{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-top: 15px;
-}
-
-.footer-bottom-rating:hover .footer-bottom-rating-desc{
-    color: #C29974;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
 }
 
 .footer-bottom-rating-desc{
@@ -534,7 +518,8 @@ button {
 
 .footer-bottom-rating-group{
     position: relative;
-    margin-top: 6px;
+    margin-bottom: 89px;
+    margin-left: 148px;
     width: 97px;
     height: 16px;
     background-image: url('/image/StarOff.svg');
@@ -556,11 +541,30 @@ button {
             appearance: none;
 }
 
-.footer-bottom-rating-input:focus ~ .footer-bottom-rating-focus{
-    outline: solid 1px #ffffff;
-    outline-offset: 5px;
-    width: 97px;
-    height: 16px;
+.footer-bottom-rating .footer-bottom-rating-desc{
+    position: absolute; 
+    top: -1px;
+    left: -148px;
+    color: #FFFFFF;
+}
+
+.footer-bottom-rating > .footer-bottom-rating-input:checked ~ span{
+    color: #C29974;
+}
+
+.footer-bottom-rating-input:focus + label {
+    outline-color: #000000;
+    outline-offset: 3px;
+    outline-style: auto;
+    outline-width: 5px;
+}
+
+.footer-bottom-rating-star:hover ~ span{
+    color: #C29974;
+}
+
+.footer-bottom-rating-input:checked ~ .footer-bottom-rating-desc{
+    color: #C29974;
 }
 
 .footer-bottom-rating-input:checked + .footer-bottom-rating-star,
@@ -631,7 +635,7 @@ button {
     top: 113px;
     left: 50%;
     margin-left: -340px;
-    z-index: 1;
+    z-index: 2;
 }
 
 .popup.open {
@@ -663,7 +667,7 @@ button {
     width: 100%;
     height: 100%;
     background: rgba(125, 151, 218, 0.8);
-    z-index: 0;
+    z-index: 1;
 }
 
 .popup-overlay.show{
@@ -700,13 +704,6 @@ button {
         -ms-flex-direction: row;
             flex-direction: row;
     margin-top: 18px;
-}
-
-input:focus + label {
-    outline-color: #000000;
-    outline-offset: -2px;
-    outline-style: auto;
-    outline-width: 5px;
 }
 
 .field .input-wrapper{
@@ -846,6 +843,13 @@ input:focus + label {
     -webkit-text-decoration-line: underline;
             text-decoration-line: underline;
     cursor: pointer;
+}
+
+.form-checkbox-input:focus + .checkbox-label{
+    outline-color: #000000;
+    outline-offset: 3px;
+    outline-style: auto;
+    outline-width: 5px;
 }
 
 .form-checkbox-input:disabled {

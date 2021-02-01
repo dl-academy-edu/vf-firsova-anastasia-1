@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .title {
     margin-top: 56px;
     padding-left: 20px;
@@ -27,17 +34,40 @@
     margin-right: 19px;
 }
 
-.catalog-item:nth-child(4) {
+.catalog-item:nth-child(1){
+    background-color: #DBE4DB;
+}
+
+.catalog-item:nth-child(2){
+    background-color: #EADDD3;
+}
+
+.catalog-item:nth-child(3){
+    background-color: #F8F2DA;
+}
+
+.catalog-item:nth-child(4){
     margin-left: 200px;
     margin-top: 24px;
+    background-color: #D5D4E1;
 }
 
-.catalog-item:nth-child(5) {
+.catalog-item:nth-child(5){
     margin-top: 24px;
+    background-color: #F3D0DB;
 }
 
-.catalog-item:nth-child(6) {
+.catalog-item:nth-child(6){
     margin-top: 24px;
+    background-color: #E5EAF8;
+}
+
+.catalog-item-img {
+    margin-top: 50%;
+    margin-left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 
 .catalog-item-link{
@@ -53,14 +83,17 @@
     line-height: 32px;
     text-decoration: none;
     color:  #FFFFFF;
+    z-index: 1;
 }
 
-.catalog-item-link:hover{
+.catalog-item:hover .catalog-item-link,
+.catalog-item:hover{
     text-decoration: underline;
     cursor: pointer;
 }
 
-.catalog-item-link:active{
+.catalog-item:active .catalog-item-link,
+.catalog-item:active{
     text-decoration: underline;
 }
 
