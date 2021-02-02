@@ -3,176 +3,188 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-field=1.0">
     <title>Desing Life Kids</title>
     <link rel="stylesheet" href="/min-css/normalize.min.css">
     <link rel="stylesheet" href="/min-css/fonts.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/min-css/common.min.css">
-    <link rel="stylesheet" href="/min-css/index.min.css">
+    <link rel="stylesheet" href="/min-css/toys.min.css">
 </head>
+
 <body>
     <header class="header container">
-        <a href="/index.html"><img src="./image/logo.png" alt="company logo" class="header-img" Width="100" height="52" aria-label="Go main page"></a>
+        <a href="../index.html"><img src="../image/logo.png" alt="company logo" class="header-img" Width="100" height="52" aria-label="Go main page"></a>
         <nav class="header-menu-nav">
             <ul class="header-menu-list">
                 <li class="header-menu-item">
-                    <a href="./page/blog.html" class="header-menu-items-link">Blog</a>
+                    <a href="./blog.html" class="header-menu-items-link">Blog</a>
                 </li>
                 <li class="header-menu-item">
-                    <a href="./page/catalog.html" class="header-menu-items-link">Catalog</a>
+                    <a href="./catalog.html" class="header-menu-items-link">Catalog</a>
                 </li>
                 <li class="header-menu-item">
-                    <a href="./page/toys.html" class="header-menu-items-link">Toys</a>
+                    <a href="./toys.html" class="header-menu-items-link">Toys</a>
                 </li>
             </ul>
         </nav>
         <button class="header-search" aria-label="search">
-            <img src="./image/search.png" alt="loupe" class="header-search-img" width="17" height="17">
+            <img src="../image/search.png" alt="loupe" class="header-search-img" width="17" height="17">
         </button>
-        <a href="./page/contact.html" class="header-contact">Contact us</a>
+        <a href="./contact.html" class="header-contact">Contact us</a>
     </header>
-    <main class="main">
-        <h1 class="main-title visually-hidden">Design life kids</h1>
-        <section class="hero container">
-            <div class="hero-holder">
-                <div class="hero-wrapper">
-                    <span class="hero-desc">01</span>
-                    <ul class="hero-list">
-                        <li class="hero-item">
-                            <button class="hero-btn hero-btn-active" aria-label="Go to the first slide"></button>
+    <main>
+        <div class="container">
+            <h1 class="title caption">Toy for kids</h1>
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs-item">
+                        <a href="../index.html" class="breadcrumbs-link breadcrumbs-link--active">Home</a>
+                </li>
+                <li class="breadcrumbs-item">
+                        <a href="/page/catalog.html" class="breadcrumbs-link breadcrumbs-link--active">Catalog</a>
+                </li>
+                <li class="breadcrumbs-item">
+                    <span class="breadcrumbs-link">Toys</span>
+                </li>
+            </ul>
+        </div>
+            <form action="https://echo.htmlacademy.ru" method="POST" class="form-toys">
+                <div class="form-toys-wrap container">
+                        <fieldset class="form-toys-field">
+                            <legend class="form-toys-legend">Cost</legend>
+                            <input type="range" id="cost" name="cost" min="0" max="500" class="form-toys-input-range">
+                            <div class="form-toys-field-text">
+                                <span class="form-toys-field-desc">0</span>
+                                <span class="form-toys-field-desc">500</span>
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-toys-field">
+                            <legend class="form-toys-legend">Color</legend>
+                            <ul class="color-list">
+                                <li class="color-item">
+                                    <input id="check-black" type="checkbox" class="form-toys-input visually-hidden" value="Black" checked>
+                                    <label for="check-black" class="form-toys-label">Black</label>
+                                </li>
+                                <li class="color-item">
+                                    <input id="check-blue" type="checkbox" class="form-toys-input  visually-hidden" value="Blue">
+                                    <label for="check-blue" class="form-toys-label">Blue</label>
+                                </li>
+                                <li class="color-item">
+                                    <input id="check-green" type="checkbox" class="form-toys-input  visually-hidden" value="Green">
+                                    <label for="check-green" class="form-toys-label">Green</label>
+                                </li>
+                                <li class="color-item">
+                                    <input id="check-white" type="checkbox" class="form-toys-input  visually-hidden" value="White">
+                                    <label for="check-white" class="form-toys-label">White</label>
+                                </li>
+
+                            </ul>
+                        </fieldset>
+                        <fieldset class="form-toys-field">
+                            <legend class="form-toys-legend">Delivery</legend>
+                            <ul class="delivery-list">
+                                <li class="delivery-item">
+                                    <input id="radio-free-shipping" type="radio" name="report" value="Free shipping" class="form-toys-input visually-hidden">
+                                    <label for="radio-free-shipping" class="form-toys-label-delivery">Free shipping</label>
+                                </li>
+                                <li class="delivery-item">
+                                    <input id="radio-fast-shipping" type="radio" name="report" value="Fast shipping" class="form-toys-input visually-hidden" checked>
+                                    <label for="radio-fast-shipping" class="form-toys-label-delivery">Fast shipping</label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <fieldset class="form-toys-field">
+                            <legend class="form-toys-legend">Amount</legend>
+                            <ul class="amount-list">
+                                <li class="amount-item">
+                                    <input id="radio-min" type="radio" name="report-amount" value="0-5" class="form-toys-input visually-hidden" checked>
+                                    <label for="radio-min" class="form-toys-label-amount">0-5</label>
+                                </li>
+                                <li class="amount-item">
+                                    <input id="radio-average" type="radio" name="report-amount" value="10-20" class="form-toys-input visually-hidden">
+                                    <label for="radio-average" class="form-toys-label-amount">10-20</label>
+                                </li>
+                                <li class="amount-item">
+                                    <input id="radio-max" type="radio" name="report-amount" value="20-50" class="form-toys-input visually-hidden">
+                                    <label for="radio-max" class="form-toys-label-amount">20-50</label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <button type="submit" class="form-toys-button btn">Apply</button>
+                </div>
+            </form>
+            <section class="toys-block container">
+                <h2 class="toys-title visually-hidden">Toys</h2>
+                <ul class="toys-list">
+                        <li class="toys-item">
+                            <a href="#" class="toys-item-link">
+                                <img src="../image/Sharky.png" alt="product picture" class="toys-item-img" width="380" height="385">
+                                <span class="toys-item-desc">Sharky bean bag chair cover</span>
+                                <span class="toys-item-text">$60.00 USD</span>
+                            </a>
                         </li>
-                        <li class="hero-item">
-                            <button class="hero-btn" aria-label="Go to the second slide"></button>
+                        <li class="toys-item">
+                            <a href="#" class="toys-item-link">
+                                <img src="../image/Brass.png" alt="product picture" class="toys-item-img" width="380" height="385">
+                                <span class="toys-item-desc">Brass deco frames</span>
+                                <span class="toys-item-text">$66.00 USD</span>
+                            </a>
                         </li>
-                        <li class="hero-item">
-                            <button class="hero-btn" aria-label="Go to the third slide"></button>
+                        <li class="toys-item">
+                            <a href="#" class="toys-item-link">
+                                <img src="../image/Cibo.png" alt="product picture" class="toys-item-img" width="380" height="385">
+                                <span class="toys-item-desc">Cibo full aproner</span>
+                                <span class="toys-item-text">$60.00 USD</span>
+                            </a>
                         </li>
-                        <li class="hero-item">
-                            <button class="hero-btn" aria-label="Go to the fourth slide"></button>
+                        <li class="toys-item">
+                            <a href="#" class="toys-item-link">
+                                <img src="../image/Gatcha.png" alt="product picture" class="toys-item-img" width="380" height="385">
+                                <span class="toys-item-desc">Gatcha gatcha gumball machine</span>
+                                <span class="toys-item-text">$56.00 USD</span>
+                            </a>
+                        </li>
+                        <li class="toys-item">
+                            <a href="#" class="toys-item-link">
+                                <img src="../image/Chrastmas.png" alt="product picture" class="toys-item-img" width="380" height="385">
+                                <span class="toys-item-desc">Chrismas advent scented candle</span>
+                                <span class="toys-item-text">$29.00 USD</span>
+                            </a>
+                        </li>
+                        <li class="toys-item">
+                            <a href="#" class="toys-item-link">
+                                <img src="../image/Tangle.png" alt="product picture" class="toys-item-img" width="380" height="382">
+                                <span class="toys-item-desc">Tangle sprinning tea light</span>
+                                <span class="toys-item-text">$56.00 USD</span>
+                            </a>
+                        </li>
+                </ul>
+                <div class="pagination">
+                    <button class="pagination-control-back" aria-label="go to the previous page"><svg  width="18" height="29" viewBox="0 0 18 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0,14.4l14.4,14.4l2.8-2.8L5.7,14.4L17.2,2.8L14.4,0L0,14.4z"/>
+                        </svg>                        
+                    </button>
+                    <ul class="pagination-list">
+                        <li class="pagination-item">
+                            <button class="pagination-button pagination-button--active">1</button>
+                        </li>
+                        <li class="pagination-item">
+                            <button class="pagination-button">2</button>
+                        </li>
+                        <li class="pagination-item">
+                            <button class="pagination-button">3</button>
+                        </li>
+                        <li class="pagination-item">
+                            <button class="pagination-button">4</button>
                         </li>
                     </ul>
+                    <button class="pagination-control-forward" aria-label="go to the next page"><svg width="18" height="29" viewBox="0 0 18 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.82846 0L3.62396e-05 2.82843L11.5858 14.4142L3.62396e-05 26L2.82846 28.8284L17.2427 14.4142L2.82846 0Z"/>
+                        </svg>                        
+                    </button>
                 </div>
-                <div class="hero-wrap">
-                    <h2 class="caption hero-title">The ooh noo collection</h2>
-                    <p class="subtitle hero-text">Designed in Slovenia</p>
-                    <button class="btn hero-button">Explore now</button>
-                </div>
-                <img src="./image/slider-pic.png" alt="slider image" class="slider-img" width="636" height="461">
-            </div>
-            <p class="hero-txt">Free (continental) USA shipping on all orders of $100 USD or more!</p>         
-        </section>
-        <section class="products container">
-            <h2 class="products-title caption">Category Products</h2>
-            <ul class="products-list">
-                <li class="products-item">
-                    <a href="#" class="products-link caption">Apparel Kids</a>
-                    <img src="./image/ApparelKids.png" alt="children's clothes" class="products-img" width="244" height="177">
-                </li>
-                <li class="products-item">
-                    <a href="#" class="products-link caption">Holiday shop</a>
-                    <img src="./image/HolidayShop.png" alt="thing for a holiday" class="products-img"  width="208" height="244">
-                </li>
-                <li class="products-item">
-                    <a href="/page/toys.html" class="products-link caption">Toys</a>
-                    <img src="./image/Toys.png" alt="toy" class="products-img"  width="270" height="270">
-                </li>
-                <li class="products-item">
-                    <a href="#" class="products-link caption">Accessories</a>
-                    <img src="./image/Accessories.png" alt="accessories" class="products-img"  width="240" height="250">
-                </li>
-            </ul>
-            <div class="products-text">
-                <button class="products-control-back" aria-label="show previous category">
-                    <svg width="18" height="30" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16 2L3 15L16 28" stroke="#1E0606" stroke-width="4" />
-                    </svg>
-                </button>
-                <button class="products-control-forward" aria-label="show next category">
-                    <svg width="18" height="30" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 2L15 15L2 28" stroke="#1E0606" stroke-width="4" />
-                    </svg>
-                </button>
-                <p class="products-desc">Modern finds for the modern home. Curated goods by unique designers around the
-                    world from fashion to
-                    furniture for kids and adults.</p>
-            </div>
-        </section>
-        <section class="delivery container">
-            <h2 class="delivery-title visually-hidden">Delivery</h2>
-            <img src="./image/delivery.png" alt="woman" class="delivery-img"  width="480" height="559">
-            <div class="delivery-txt">
-                <h2 class="delivery-txt-subtitle caption">Delivery</h2>
-                <ul class="delivery-txt-list">
-                    <li class="delivery-txt-list-item">
-                        <button class="delivery-txt-btn delivery-txt-btn-active">Delivery</button>
-                    </li>
-                    <li class="delivery-txt-list-item">
-                        <button class="delivery-txt-btn">Guarantee</button>
-                    </li>
-                    <li class="delivery-txt-list-item">
-                        <button class="delivery-txt-btn">Credit</button>
-                    </li>
-                </ul>
-                <p class="delivery-txt-desc">
-                    Some days i feel like i've been working on dlk my entire life and there are other days that
-                    i am completely
-                    shocked that four years have flown by. It's simply magical.
-                </p>
-                <p class="delivery-txt-desc">
-                    What started as an outlet to deal with the traumatic loss of my husband, dlk has now become a truly
-                    happy
-                    place for me and i have you and all of the beautiful designers that we work with to thank!
-                </p>
-                <a href="#" class="delivery-txt-link btn">LEARN MORE</a>
-            </div>
-        </section>
-        <section class="partners container">
-            <h2 class="parthers-title visually-hidden">partners</h2>
-            <ul class="parthers-list">
-                <li class="partners-list-item">
-                    <a href="#" class="partners-item-link"><img src="./image/partners/mail.png" alt=" logo mail"
-                            class="partners-img"  width="193" height="60"></a>
-                </li>
-                <li class="partners-list-item">
-                    <a href="#" class="partners-item-link"><img src="./image/partners/apple.png" alt="logo apple"
-                            class="partners-img"  width="179" height="61"></a>
-                </li>
-                <li class="partners-list-item">
-                    <a href="#" class="partners-item-link"><img src="./image/partners/eltex.png" alt="logo eltex"
-                            class="partners-img"  width="216" height="46"></a>
-                </li>
-                <li class="partners-list-item">
-                    <a href="#" class="partners-item-link"><img src="./image/partners/owox.png" alt="logo owox"
-                            class="partners-img"  width="211" height="40"></a>
-                </li>
-            </ul>
-        </section>
-        <section class="info container">
-            <h2 class="info-title visually-hidden">info</h2>
-            <div class="info-wrapper">
-                <section class="info-about-us">
-                    <h2 class="info-about-us-title caption">Design Life Kids</h2>
-                    <p class="info-about-us-subtitle subtitle">About Us</p>
-                    <p class="info-about-us-text">
-                        Some days i feel like i've been working on dlk my entire life and there are other days that
-                        i am completely shocked that four years have flown by. It's simply magical.
-                    </p>
-                    <button class="info-about-us-button btn">Buy now</button>
-                </section>
-                <section class="info-contacts">
-                    <h2 class="info-contacts-title caption">Contacts</h2>
-                    <p class="info-contacts-desc">
-                        Some days i feel like i've been working on dlk my entire life and there are other days that
-                        i am completely shocked that four years have flown by. It's simply magical.
-                    </p>
-                    <div class="info-contact-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7500.586934183877!2d-122.42102936415478!3d37.77578096629035!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6c8f4459%3A0xb10ed6d9b5050fa5!2sTwitter!5e0!3m2!1sen!2sru!4v1612109998438!5m2!1sen!2sru" frameborder="0"></iframe>
-                    </div>
-                </section>
-            </div>
-        </section>
+            </section>    
     </main>
     <footer class="footer">
         <div class="container">
@@ -226,8 +238,7 @@
                 <div class="footer-connect">
                     <p class="footer-connect-text footer-text">Connect</p>
                     <form action="https://echo.htmlacademy.ru" method="post" class="form-connect">
-                        <input type="text" id="e-mail" class="form-connect-input" placeholder="Email">
-                        <label for="e-mail" class="form-connect-label" aria-label="E-mail"></label>
+                        <input type="text" class="form-connect-input" placeholder="Email">
                         <button type="submit" class="form-connect-button btn">Join</button>
                     </form>
                     <ul class="footer-connect-social-list">
@@ -280,61 +291,25 @@
             </div>
           <div class="footer-wrapper">
             <div class="footer-bottom-rating">
-                <div class="footer-bottom-rating-group">
-                    <input class="footer-bottom-rating-input visually-hidden" type="radio" name="star" id="star-1" value="1">
-                    <label class="footer-bottom-rating-star" for="star-1" aria-label="Ужасно"></label>
-                    <input class="footer-bottom-rating-input visually-hidden" type="radio" name="star" id="star-2" value="2">
-                    <label class="footer-bottom-rating-star" for="star-2"  aria-label="Сностно"></label>
-                    <input class="footer-bottom-rating-input visually-hidden" type="radio" name="star" id="star-3" value="3">
-                    <label class="footer-bottom-rating-star" for="star-3" aria-label="Нормально"></label>
-                    <input class="footer-bottom-rating-input visually-hidden" type="radio" name="star" id="star-4" value="4">
-                    <label class="footer-bottom-rating-star" for="star-4" aria-label="Хорошо"></label>
-                    <input class="footer-bottom-rating-input visually-hidden" type="radio" name="star" id="star-5" value="5">
-                    <label class="footer-bottom-rating-star" for="star-5" aria-label="Отлично"></label>
-                    <span class="footer-bottom-rating-desc">Company Rating</span>
-                </div>
+                    <div class="footer-bottom-rating-group">
+                        <input class="footer-bottom-rating-input visually-hidden" type="radio" name="star" id="star-1" value="1">
+                        <label class="footer-bottom-rating-star" for="star-1" aria-label="Ужасно"></label>
+                        <input class="footer-bottom-rating-input visually-hidden" type="radio" name="star" id="star-2" value="2">
+                        <label class="footer-bottom-rating-star" for="star-2"  aria-label="Сностно"></label>
+                        <input class="footer-bottom-rating-input visually-hidden" type="radio" name="star" id="star-3" value="3">
+                        <label class="footer-bottom-rating-star" for="star-3" aria-label="Нормально"></label>
+                        <input class="footer-bottom-rating-input visually-hidden" type="radio" name="star" id="star-4" value="4">
+                        <label class="footer-bottom-rating-star" for="star-4" aria-label="Хорошо"></label>
+                        <input class="footer-bottom-rating-input visually-hidden" type="radio" name="star" id="star-5" value="5">
+                        <label class="footer-bottom-rating-star" for="star-5" aria-label="Отлично"></label>
+                        <span class="footer-bottom-rating-desc">Company Rating</span>
+                    </div>
             </div>
             <p class="footer-bottom-rating-text">Copyright © 2018 Dlk • Design Life Kids</p>
             <a href="https://directline.digital/" class="footer-bottom-rating-link">Web Design — Direct Line Development</a>
           </div>
         </div>
     </footer>
-    <div class="popup-overlay"></div>
-    <section class="popup">
-        <h2 class="visually-hidden">Popup</h2>
-        <button type="button" class="popup-button"><span class="visually-hidden">close popup</span><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M2.21902 14.6113C1.70029 15.1295 0.893368 15.1295 0.374636 14.6113C0.11527 14.3522 -6.13512e-07 14.0355 -5.9841e-07 13.69C-5.83308e-07 13.3445 0.11527 13.0278 0.374636 12.7687L5.64841 7.5L0.374637 2.23127C0.115271 1.97215 -7.23629e-08 1.65547 -5.72611e-08 1.30998C-4.21593e-08 0.964491 0.115271 0.647806 0.374637 0.388689C0.893369 -0.129545 1.70029 -0.129545 2.21902 0.388689L7.4928 5.65738L12.7666 0.38869C13.2853 -0.129545 14.0922 -0.129545 14.611 0.38869C15.1297 0.906924 15.1297 1.71304 14.611 2.23127L9.33718 7.5L14.611 12.7687C15.1297 13.287 15.1297 14.0931 14.611 14.6113C14.0922 15.1295 13.2853 15.1295 12.7666 14.6113L7.4928 9.34258L2.21902 14.6113Z" fill="white"/>
-            </svg>
-            </button>
-        <form action="https://echo.htmlacademy.ru" method="post" class="form">
-            <fieldset class="form-fieldset">
-                <div class="input-wrapper">
-                    <input id="name-input" type="text" placeholder="Ivan Ivanov" class="form-input">
-                    <label for="name-input" class="form-label">Name</label>
-                </div>
-                <div class="field">
-                    <div class="input-wrapper">
-                        <input type="tel" id="phone-input" class="form-input">   
-                        <label for="phone-input" class="form-label">Phone</label>
-                    </div>
-                    <div class="input-wrapper">
-                        <input type="email" id="email-input" class="form-input">
-                        <label for="email-input" class="form-label">Email</label>
-                    </div>
-                </div>
-                <div class="textarea-wrapper">
-                    <textarea id="textarea" cols="10" rows="10" class="form-input"></textarea>
-                    <label for="textarea" class="form-label">Message</label>
-                </div>
-                <div class="checkbox-wrapper">
-                    <input id="check" type="checkbox" class="form-checkbox-input visually-hidden" value="" checked>
-                    <label for="check" class="form-label checkbox-label">By clicking on the button, you consent to the processing of your
-                        personal data</label>
-                </div>
-           <button type="submit" class="form-button btn">Submit</button>
-        </fieldset>
-        </form>
-    </section>
-    <script src="/js/index.min.js"></script>
 </body>
+
 </html>
